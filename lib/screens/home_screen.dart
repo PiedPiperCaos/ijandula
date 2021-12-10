@@ -85,7 +85,7 @@ class Content extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(user!.displayName.toString(),//"Zafra Romero, Alejandro", 
+                        Text(user!.displayName.toString(),
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.bold
@@ -201,7 +201,10 @@ class Content extends StatelessWidget {
                     ),
                     TableRow(
                       children: [
-                        _SingleCard(icon: "assets/campana.png", text: "Tablón de anuncios"),
+                        GestureDetector(
+                          child: _SingleCard(icon: "assets/campana.png", text: "DACE"),
+                          onTap: () => Navigator.pushNamed(context, "dace_screen")
+                        ),
                         _SingleCard(icon: "assets/calendario.png", text: "Calendario escolar"),
                         _SingleCard(icon: "", text: "")                      
                       ]
