@@ -91,10 +91,20 @@ class Content extends StatelessWidget {
                             fontWeight: FontWeight.bold
                           ),
                         ),
+                        
                         Expanded(child: SizedBox(width: 60)),
-                        Icon(Icons.arrow_drop_down),
+                        
                         GestureDetector(
-                          child: Icon(Icons.people, size: 20),
+                          child: Row(
+                            children: [
+                              Column(
+                                children: [
+                                  Icon(Icons.power_settings_new, size: 20, color: Colors.red,),
+                                  Text("Cerrar sesión", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),                            
+                            ],
+                          ),
                           onTap: ()async {
                             FirebaseService service = new FirebaseService();
                             try {
@@ -109,9 +119,7 @@ class Content extends StatelessWidget {
                         )
                       ],
                     ),
-                    
-                    SizedBox(height: 8,),
-                    
+                                        
                     Row(
                       children: [
                         Column(

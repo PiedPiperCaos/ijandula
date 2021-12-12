@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:seneca/provider/dace_provider.dart';
+import 'package:flutter/src/gestures/tap.Dart';
+import 'package:url_launcher/url_launcher.Dart';
 
 class DaceScreen extends StatefulWidget {
   const DaceScreen({Key? key}) : super(key: key);
@@ -29,16 +31,33 @@ class _DaceScreenState extends State<DaceScreen> {
     return ListView.builder(
       itemCount: resultadosDace.resultados.length,
       itemBuilder: (BuildContext context, int index) {
-        return GestureDetector(
-          onTap: (){
-          },
-          child: ListTile(
-            leading: Icon(Icons.add, color: Colors.blue),
-            title: Text(resultadosDace.resultados[index].actividad),
-            trailing: Text(resultadosDace.resultados[index].fechaInicio),
-          ),
-        );
+        
+          return Column(
+            children: [
+              GestureDetector(
+                onTap: (){
+                  _launchURL(resultadosDace.resultados[index].alumnos);
+                },
+                child: ListTile(
+                  leading: Icon(Icons.add, color: Colors.blue),
+                  title: Text(resultadosDace.resultados[index].actividad),
+                  trailing: Text(resultadosDace.resultados[index].fechaInicio),
+                ),
+              ),
+              Divider()
+            ],
+          );
+
       },
     );
   }
+  
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 }
+
