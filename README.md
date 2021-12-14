@@ -1,16 +1,9 @@
-# seneca
+# iJándula
 
-A new Flutter project.
+Proyecto del IES Jándula realizado por el alumnado de 2DAM del curso 2021/2022
 
-## Getting Started
+## Funcionalidad
 
-This project is a starting point for a Flutter application.
+Clone de iSéneca con 5 funcionalidades. Cada una de ellas realizada por un equipo de 2 programadores.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://docs.google.com/document/d/13v02_duzzzDuH7YjnPmxxD48Rw5FBHr-nm9xx9upUEI/edit?usp=sharing
