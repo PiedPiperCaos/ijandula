@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.seneca">
+    package="com.iesjandula.iJandula">
    <application
-        android:label="seneca"
+        android:label="iJandula"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

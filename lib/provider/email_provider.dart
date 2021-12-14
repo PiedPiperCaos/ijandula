@@ -13,7 +13,7 @@ class EmailProvider extends ChangeNotifier {
 
   Future<String> _getJsonData() async{
     
-    final url = Uri.parse('https://opensheet.vercel.app/149zzcYE1utXnOeawKTjh2p7bFuPNNb8nL3xcXVInRcg/2');
+    final url = Uri.parse('https://opensheet.vercel.app/1KwR6799de-qtIDu-1jUc_Yz3Q0RbMqzJ1T-2nqtO2ek/users');
 
     // Await the http get response, then decode the json-formatted respo
     final response = await http.get(url);
@@ -28,7 +28,7 @@ class EmailProvider extends ChangeNotifier {
     final emailData = EmailResponse.fromJson('{"results":'+jsonData+'}');
 
     resultados = emailData.results;
-    //print(resultados);
+    print(resultados);
     notifyListeners();  
   }
   

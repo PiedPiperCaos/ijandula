@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         ),
         
         //BottomNavigationBar
-        bottomNavigationBar: NavigationBar(),
+        //bottomNavigationBar: NavigationBar(),
       ),
     );
   }
@@ -61,7 +61,7 @@ class Content extends StatelessWidget {
               
               //Titulo
               Text(
-                "iSéneca",
+                "iJándula",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 45,
@@ -132,7 +132,7 @@ class Content extends StatelessWidget {
                               ),
                             ),
 
-                            Text("Perfil Dirección",
+                            Text("Perfil Profesorado",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.blue,
@@ -157,7 +157,7 @@ class Content extends StatelessWidget {
                   color: Colors.blue
                 ),
 
-                child: Row(
+                /*child: Row(
                   children: [
                     SizedBox(width: 45),
                     Icon(Icons.alarm, color: Colors.white,),
@@ -182,7 +182,7 @@ class Content extends StatelessWidget {
                       ),
                     )
                   ],
-                ),
+                ),*/
               ),
 
               //Table
@@ -202,9 +202,9 @@ class Content extends StatelessWidget {
                   children: [
                     TableRow(
                       children: [
-                        _SingleCard(icon: "assets/sombrero.png", text: "Alumnado del centro"),
                         _SingleCard(icon: "assets/profesor.png", text: "Personal del centro"),
-                        _SingleCard(icon: "assets/covid.png", text: "Información Covid")                      
+                        _SingleCard(icon: "assets/sombrero.png", text: "Alumnado del centro"),
+                        _SingleCard(icon: "assets/covid.png", text: "Convivencia")                      
                       ]
                     ),
                     TableRow(
@@ -213,7 +213,7 @@ class Content extends StatelessWidget {
                           child: _SingleCard(icon: "assets/campana.png", text: "DACE"),
                           onTap: () => Navigator.pushNamed(context, "dace_screen")
                         ),
-                        _SingleCard(icon: "assets/calendario.png", text: "Calendario escolar"),
+                        _SingleCard(icon: "assets/calendario.png", text: "Baño"),
                         _SingleCard(icon: "", text: "")                      
                       ]
                     ),

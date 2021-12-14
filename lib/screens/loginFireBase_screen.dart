@@ -84,14 +84,14 @@ class _ContentState extends State<Content> {
             SizedBox(height: 70),
 
             //No recuerdo contraseña
-            Text(
+            /*Text(
               "No recuerdo mi contraseña",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.bold
               ),
-            ),
+            ),*/
     
             Divider(height: 18, color: Colors.white, indent: 77, endIndent: 77,),
           
@@ -114,10 +114,10 @@ class _ContentState extends State<Content> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Junta de Andalucía", 
+                    Text("IES Jándula", 
                       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                     SizedBox(height: 7),
-                    Text("Consejería de Educación y Deporte",
+                    Text("Desarrollo Aplicaciones Multiplataforma",
                       style: TextStyle(color: Colors.white)),
                   ],
                 ),
@@ -128,7 +128,7 @@ class _ContentState extends State<Content> {
             Container(
               margin: EdgeInsets.only(top: 10, right: 10),
               alignment: Alignment.bottomRight,
-              child: Text("v11.3.0", 
+              child: Text("v1.1.0", 
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
             )
           ], 
