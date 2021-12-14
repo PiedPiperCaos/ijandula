@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:seneca/services/sign_in.dart';
+import 'package:ijandula/services/sign_in.dart';
 
 class LoginFireBaseScreen extends StatelessWidget {
 
@@ -67,8 +67,9 @@ class _ContentState extends State<Content> {
             
             //Titulo
             Text(
-              "iSéneca", 
+              "iJándula", 
               style: TextStyle(
+                fontFamily: 'ErasDemi',
                 color: Colors.white,
                 fontSize: 65,
                 fontWeight: FontWeight.bold,

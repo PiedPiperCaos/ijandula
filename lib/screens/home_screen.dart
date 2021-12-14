@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:seneca/services/firebase.dart';
+import 'package:ijandula/services/firebase.dart';
 
 class HomeScreen extends StatelessWidget {
 

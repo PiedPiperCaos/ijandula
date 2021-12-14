@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:seneca/models/email_response.dart';
+import 'package:ijandula/models/email_response.dart';
 
 class EmailProvider extends ChangeNotifier {
 

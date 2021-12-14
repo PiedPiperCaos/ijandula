@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:seneca/provider/email_provider.dart';
-import 'package:seneca/services/firebase.dart';
+import 'package:ijandula/provider/email_provider.dart';
+import 'package:ijandula/services/firebase.dart';
 
 class GoogleSignIn extends StatefulWidget {
   GoogleSignIn({Key? key}) : super(key: key);

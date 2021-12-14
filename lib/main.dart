@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:seneca/provider/email_provider.dart';
-import 'package:seneca/screens/home_screen.dart';
-import 'package:seneca/screens/loginFireBase_screen.dart';
+import 'package:ijandula/provider/email_provider.dart';
+import 'package:ijandula/screens/home_screen.dart';
+import 'package:ijandula/screens/loginFireBase_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
