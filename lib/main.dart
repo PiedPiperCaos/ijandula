@@ -1,9 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:seneca/provider/dace_provider.dart';
 import 'package:seneca/provider/email_provider.dart';
-import 'package:seneca/screens/dace_screen.dart';
 import 'package:seneca/screens/home_screen.dart';
 import 'package:seneca/screens/loginFireBase_screen.dart';
 
@@ -20,7 +18,6 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context)=> EmailProvider(), lazy: false,),
-        ChangeNotifierProvider(create: (context)=> DaceProvider(), lazy: false,)
       ],
       child: MyApp(),
     );
@@ -36,7 +33,6 @@ class MyApp extends StatelessWidget {
       routes: {
         "loginFireBase_screen": (_) => LoginFireBaseScreen(),
         "home_screen": (_) => HomeScreen(),
-        "dace_screen": (_) => DaceScreen(),
       },
     );
   }
