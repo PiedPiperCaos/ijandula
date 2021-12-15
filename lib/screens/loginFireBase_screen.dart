@@ -71,8 +71,8 @@ class _ContentState extends State<Content> {
               style: TextStyle(
                 fontFamily: 'ErasDemi',
                 color: Colors.white,
-                fontSize: 65,
-                fontWeight: FontWeight.bold,
+                fontSize: 75,
+                //fontWeight: FontWeight.bold,
               ),
             ),
             
@@ -118,6 +118,7 @@ class _ContentState extends State<Content> {
                       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                     SizedBox(height: 7),
                     Text("Desarrollo Aplicaciones Multiplataforma",
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(color: Colors.white)),
                   ],
                 ),

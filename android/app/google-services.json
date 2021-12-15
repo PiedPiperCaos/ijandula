@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "111189100287",
+    "project_id": "ijandula-98bb6",
+    "storage_bucket": "ijandula-98bb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111189100287:android:10849559eabbdde4496eca",
+        "android_client_info": {
+          "package_name": "com.iesjandula.iJandula"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111189100287-00n3jki10pg0tottn5d58e81mjdopgl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "8479eab2a657a199b4f1ed31a3acff9acea2856b"
+          }
+        },
+        {
+          "client_id": "111189100287-69nuohavv0sau1eap5t0b6tht8sv8j92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "f8e5cb4b1e6fce26b91c29beedda20d21eb37326"
+          }
+        },
+        {
+          "client_id": "111189100287-6mi923jrlf9fp6mhpe55g1peo5t2ner0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "7108f5077c064ee3493b91f5c952484634682467"
+          }
+        },
+        {
+          "client_id": "111189100287-8q2dsvg7ev6redfctr8roseifro21dl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "dcd87d631cfaad859565625e840a654f2166a2d0"
+          }
+        },
+        {
+          "client_id": "111189100287-cf3je3puc3r2g0m2cll5e8j1ie85qtqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "ba2049c5847d9f1282eb9ea75411b5f4ace2d217"
+          }
+        },
+        {
+          "client_id": "111189100287-ddqeotjrtfops7la1g1s7gvdusft87e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "16c3ee27c192dfc29e27bde2ba82f52e7fc7c6c1"
+          }
+        },
+        {
+          "client_id": "111189100287-f5gg43984engsqt9o9ps6mnvb2keu1jo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "720352c5aaa3fae2a188fca53c186960ca2a5aa3"
+          }
+        },
+        {
+          "client_id": "111189100287-mnrkfsn0lqlool5skimek7n6sln6dq0g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "3dba40f50b715e5e07289a4c129580d7024e34f3"
+          }
+        },
+        {
+          "client_id": "111189100287-obdbvaapjl9fdev99buj0ktonik7mhqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "76527d9947d564cfbce23154e2666dfa51703a27"
+          }
+        },
+        {
+          "client_id": "111189100287-pjj9odmmebd7sc1kd1klqgnvs93bnsqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "d1ced018008a79fb1861658a2d5b84223d921513"
+          }
+        },
+        {
+          "client_id": "111189100287-vii3ol1ts3pavf1vb0n2fqeoqptalhqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iesjandula.iJandula",
+            "certificate_hash": "54526b2b1785e8a76b3b0b4d819a28b019918cb3"
+          }
+        },
+        {
+          "client_id": "111189100287-evai6vu58ggbmnc0ir4pjb3vb0k99aoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsw0jXDwyfNHEnC31DoaarR1xc7ALwJC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111189100287-evai6vu58ggbmnc0ir4pjb3vb0k99aoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
