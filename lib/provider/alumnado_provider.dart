@@ -38,7 +38,7 @@ class AlumnadoProvider extends ChangeNotifier {
 
   Future<List<String>> getCursos() async {
     String jsonData = await this._getJsonData(_url, _api, _hojaCursos);
-    jsonData = '{"result":' + jsonData + '}';
+    jsonData = '{"results":' + jsonData + '}';
     final nowPlayingRespose = Cursos.fromJson(jsonData);
     List<String> nombres = [];
 
@@ -50,7 +50,7 @@ class AlumnadoProvider extends ChangeNotifier {
 
   Future<List<dynamic>> getAlumnos(String cursoABuscarAlumnos) async {
     String jsonData = await this._getJsonData(_url, _api, _hojaAlumnos);
-    jsonData = '{"result":' + jsonData + '}';
+    jsonData = '{"results":' + jsonData + '}';
     final nowPlayingRespose = Alumnos.fromJson(jsonData);
     List<dynamic> nombresAlumnos = [];
     for (int i = 0; i < nowPlayingRespose.result.length; i++) {
@@ -62,7 +62,7 @@ class AlumnadoProvider extends ChangeNotifier {
 
   getAlumno() async {
     String jsonData = await this._getJsonData(_url, _api, _hojaAlumnos);
-    jsonData = '{"result":' + jsonData + '}';
+    jsonData = '{"results":' + jsonData + '}';
     final nowPlayingRespose = Alumnos.fromJson(jsonData);
     alumno = nowPlayingRespose.result;
     notifyListeners();
@@ -70,7 +70,7 @@ class AlumnadoProvider extends ChangeNotifier {
 
   getHorario() async {
     String jsonData = await this._getJsonData(_url, _api, _hojaHorario);
-    jsonData = '{"result":' + jsonData + '}';
+    jsonData = '{"results":' + jsonData + '}';
     final nowPlayingRespose = Horario.fromJson(jsonData);
     horario = nowPlayingRespose.result;
     notifyListeners();

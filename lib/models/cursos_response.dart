@@ -14,7 +14,7 @@ class Cursos {
   factory Cursos.fromJson(String str) => Cursos.fromMap(json.decode(str));
 
   factory Cursos.fromMap(Map<String, dynamic> json) => Cursos(
-        result: List<Curso>.from(json["result"].map((x) => Curso.fromMap(x))),
+        result: List<Curso>.from(json["results"].map((x) => Curso.fromMap(x))),
       );
 }
 

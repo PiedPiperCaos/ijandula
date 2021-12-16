@@ -15,7 +15,7 @@ class Alumnos {
 
   factory Alumnos.fromMap(Map<String, dynamic> json) => Alumnos(
         result: List<DatosAlumnos>.from(
-            json["result"].map((x) => DatosAlumnos.fromMap(x))),
+            json["results"].map((x) => DatosAlumnos.fromMap(x))),
       );
 }
 

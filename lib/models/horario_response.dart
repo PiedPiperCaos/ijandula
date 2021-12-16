@@ -11,7 +11,7 @@ class Horario {
 
   factory Horario.fromMap(Map<String, dynamic> json) => Horario(
         result: List<HorarioResult>.from(
-            json["result"].map((x) => HorarioResult.fromMap(x))),
+            json["results"].map((x) => HorarioResult.fromMap(x))),
       );
 }
 
