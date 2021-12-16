@@ -5,23 +5,22 @@ import 'package:flutter/painting.dart';
 import 'package:ijandula/services/firebase.dart';
 
 class HomeScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    
     return WillPopScope(
-      onWillPop: () async => false,  //Inhabilita el botón del dispositivo para volver atrás
+      onWillPop: () async =>
+          false, //Inhabilita el botón del dispositivo para volver atrás
       child: Scaffold(
         body: Stack(
           children: [
             //Background
             Background(),
-    
+
             //Content
             Content(),
           ],
         ),
-        
+
         //BottomNavigationBar
         //bottomNavigationBar: NavigationBar(),
       ),
@@ -34,13 +33,8 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 150,
-          color: Color(0xff005298)
-        ),
-        Container(
-          color: Colors.white
-        ),
+        Container(height: 150, color: Color(0xff005298)),
+        Container(color: Colors.white),
       ],
     );
   }
@@ -49,7 +43,6 @@ class Background extends StatelessWidget {
 class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     User? user = FirebaseAuth.instance.currentUser;
 
     return ListView(
@@ -58,15 +51,14 @@ class Content extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 5),
-              
+
               //Titulo
               Text(
                 "iJándula",
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold
-                ),
+                    color: Colors.white,
+                    fontSize: 45,
+                    fontWeight: FontWeight.bold),
               ),
 
               SizedBox(height: 10),
@@ -85,54 +77,57 @@ class Content extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(user!.displayName.toString(),
+                        Text(
+                          user!.displayName.toString(),
                           style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontSize: 17, fontWeight: FontWeight.bold),
                         ),
-                        
                         Expanded(child: SizedBox(width: 60)),
-                        
                         GestureDetector(
-                          child: Row(
-                            children: [
-                              Column(
-                                children: [
-                                  Icon(Icons.power_settings_new, size: 20, color: Colors.red,),
-                                  Text("Cerrar sesión", style: TextStyle(fontSize: 10)),
-                                ],
-                              ),                            
-                            ],
-                          ),
-                          onTap: ()async {
-                            FirebaseService service = new FirebaseService();
-                            try {
-                              await service.signOutFromGoogle();
-                            } catch (e) {
-                              if (e is FirebaseAuthException) {
-                                print(e.message!);
+                            child: Row(
+                              children: [
+                                Column(
+                                  children: [
+                                    Icon(
+                                      Icons.power_settings_new,
+                                      size: 20,
+                                      color: Colors.red,
+                                    ),
+                                    Text("Cerrar sesión",
+                                        style: TextStyle(fontSize: 10)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            onTap: () async {
+                              FirebaseService service = new FirebaseService();
+                              try {
+                                await service.signOutFromGoogle();
+                              } catch (e) {
+                                if (e is FirebaseAuthException) {
+                                  print(e.message!);
+                                }
                               }
-                            };
-                            Navigator.pushNamed(context, "loginFireBase_screen");
-                          }
-                        )
+                              ;
+                              Navigator.pushNamed(
+                                  context, "loginFireBase_screen");
+                            })
                       ],
                     ),
-                                        
                     Row(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("I.E.S Jándula",
+                            Text(
+                              "I.E.S Jándula",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.blue,
                               ),
                             ),
-
-                            Text("Perfil Profesorado",
+                            Text(
+                              "Perfil Profesorado",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.blue,
@@ -145,17 +140,15 @@ class Content extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               Container(
                 height: 50,
                 width: 330,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(5), 
-                    bottomRight: Radius.circular(5)
-                  ),
-                  color: Colors.blue
-                ),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(5),
+                        bottomRight: Radius.circular(5)),
+                    color: Colors.blue),
 
                 /*child: Row(
                   children: [
@@ -200,23 +193,27 @@ class Content extends StatelessWidget {
                     ),
                   ),
                   children: [
-                    TableRow(
-                      children: [
-                        _SingleCard(icon: "assets/profesor.png", text: "Personal del centro"),
-                        _SingleCard(icon: "assets/sombrero.png", text: "Alumnado del centro"),
-                        _SingleCard(icon: "assets/covid.png", text: "Convivencia")                      
-                      ]
-                    ),
-                    TableRow(
-                      children: [
-                        GestureDetector(
-                          child: _SingleCard(icon: "assets/campana.png", text: "DACE"),
-                          onTap: () => Navigator.pushNamed(context, "dace_screen")
-                        ),
-                        _SingleCard(icon: "assets/calendario.png", text: "Baño"),
-                        _SingleCard(icon: "", text: "")                      
-                      ]
-                    ),
+                    TableRow(children: [
+                      _SingleCard(
+                          icon: "assets/profesor.png",
+                          text: "Personal del centro"),
+                      GestureDetector(
+                          child: _SingleCard(
+                              icon: "assets/sombrero.png",
+                              text: "Alumnado del centro"),
+                          onTap: () =>
+                              Navigator.pushNamed(context, "alumnado")),
+                      _SingleCard(icon: "assets/covid.png", text: "Convivencia")
+                    ]),
+                    TableRow(children: [
+                      GestureDetector(
+                          child: _SingleCard(
+                              icon: "assets/campana.png", text: "DACE"),
+                          onTap: () =>
+                              Navigator.pushNamed(context, "dace_screen")),
+                      _SingleCard(icon: "assets/calendario.png", text: "Baño"),
+                      _SingleCard(icon: "", text: "")
+                    ]),
                   ],
                 ),
               )
@@ -229,35 +226,29 @@ class Content extends StatelessWidget {
 }
 
 class _SingleCard extends StatelessWidget {
-
   final String icon;
   final String text;
 
-  const _SingleCard({
-    Key? key, 
-    required this.icon, 
-    required this.text
-  }) : super(key: key);
+  const _SingleCard({Key? key, required this.icon, required this.text})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    if(icon=="") {
-        return Container();
-    } 
-    else {
+    if (icon == "") {
+      return Container();
+    } else {
       return Container(
         margin: EdgeInsets.symmetric(vertical: 35, horizontal: 12),
         child: Column(
           children: [
-          
             Container(
               height: 44,
               width: 45,
-              child: Image.asset(this.icon),           
+              child: Image.asset(this.icon),
             ),
             SizedBox(height: 10),
-            Text(this.text,
+            Text(
+              this.text,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
@@ -274,31 +265,21 @@ class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedFontSize: 12,
-      selectedItemColor: Color(0xff005298),
-      unselectedItemColor: Color(0xffbcbcbc),
-      showUnselectedLabels: true,
-      currentIndex: 0,
-      type: BottomNavigationBarType.fixed,
-      items:[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_filled),
-          label: "Inicio"
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.history_toggle_off),
-          label: "Agenda"
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.messenger_outline_rounded),
-          label: "Comunicaciones"
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.menu),
-          label: "Menú"
-        ),
-      ]
-    );
+        selectedFontSize: 12,
+        selectedItemColor: Color(0xff005298),
+        unselectedItemColor: Color(0xffbcbcbc),
+        showUnselectedLabels: true,
+        currentIndex: 0,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled), label: "Inicio"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.history_toggle_off), label: "Agenda"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.messenger_outline_rounded),
+              label: "Comunicaciones"),
+          BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Menú"),
+        ]);
   }
 }
-
