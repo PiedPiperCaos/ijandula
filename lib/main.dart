@@ -10,10 +10,17 @@ import 'package:ijandula/screens/convivencia_screen.dart';
 import 'package:ijandula/screens/dace_screen.dart';
 import 'package:ijandula/screens/datos_alumno_screen.dart';
 import 'package:ijandula/screens/expulsados_screen.dart';
+import 'package:ijandula/screens/contacto_screen.dart';
+import 'package:ijandula/screens/dace_screen.dart';
+import 'package:ijandula/screens/datos_alumno_screen.dart';
+import 'package:ijandula/screens/horario_personal_screen.dart';
+import 'package:ijandula/screens/horario_prof_screen.dart';
 import 'package:ijandula/screens/horarios_cursos.dart';
 import 'package:ijandula/screens/horarios_screen.dart';
+import 'package:ijandula/screens/listado_profesores.dart';
 import 'package:ijandula/screens/mail_telefono_screen.dart';
 import 'package:ijandula/screens/mayores_screen.dart';
+import 'package:ijandula/screens/personal_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:ijandula/provider/email_provider.dart';
 import 'package:ijandula/screens/home_screen.dart';
@@ -74,6 +81,11 @@ class MyApp extends StatelessWidget {
         'convivencia' : ( _ ) => Convivencia(),
         'mayores' : ( _ ) => MayoresScreen(),
         'expulsados' : ( _ ) => ExpulsadosScreen(),
+        "personal_screen": (_) => PersonalScreen(),
+        "listado_screen": (_) => ListadoProfesores(),
+        "horario_screen": (_) => HorarioPersonalScreen(),
+        "horario_prof_screen": (_) => HorarioProfScreen(),
+        "contacto_screen": (_) => ContactoScreen(),
       },
     );
   }
