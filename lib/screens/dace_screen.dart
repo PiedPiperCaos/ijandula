@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ijandula/provider/dace_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.Dart';
+import 'package:intl/intl.dart';
 
 class DaceScreen extends StatefulWidget {
   const DaceScreen({Key? key}) : super(key: key);
@@ -26,11 +27,16 @@ class _DaceScreenState extends State<DaceScreen> {
   Widget _lista() {
 
     final resultadosDace = Provider.of<DaceProvider>(context);
-  
+
+    //Ordenar fecha de menor a mayor
+    resultadosDace.resultados.sort((a,b) => DateFormat('d/M/yyyy').parse(a.fechaInicio).compareTo(DateFormat('d/M/yyyy').parse(b.fechaInicio)));
+
     return ListView.builder(
       itemCount: resultadosDace.resultados.length,
       itemBuilder: (BuildContext context, int index) {
-        
+
+        //Solo muestra las actividades con fecha de inicio posterior a la fecha de hoy
+        if(DateFormat('d/M/yyyy').parse(resultadosDace.resultados[index].fechaInicio).isAfter(DateTime.now())){
           return Column(
             children: [
               GestureDetector(
@@ -46,7 +52,10 @@ class _DaceScreenState extends State<DaceScreen> {
               Divider()
             ],
           );
-
+        }
+        else{
+          return Container();
+        }
       },
     );
   }

@@ -85,14 +85,15 @@ class Content extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(user!.displayName.toString(),
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold
+                        Expanded(
+                          child: Text(user!.displayName.toString(),
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
-                        
-                        Expanded(child: SizedBox(width: 60)),
                         
                         GestureDetector(
                           child: Row(
