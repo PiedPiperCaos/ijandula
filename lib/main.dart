@@ -2,8 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ijandula/provider/alumnado_provider.dart';
 import 'package:ijandula/provider/dace_provider.dart';
+import 'package:ijandula/provider/expulsados_provider.dart';
+import 'package:ijandula/provider/mayores_provider.dart';
 import 'package:ijandula/screens/alumnado_screen.dart';
 import 'package:ijandula/screens/alumnos_screen.dart';
+import 'package:ijandula/screens/convivencia_screen.dart';
+import 'package:ijandula/screens/dace_screen.dart';
+import 'package:ijandula/screens/datos_alumno_screen.dart';
+import 'package:ijandula/screens/expulsados_screen.dart';
 import 'package:ijandula/screens/contacto_screen.dart';
 import 'package:ijandula/screens/dace_screen.dart';
 import 'package:ijandula/screens/datos_alumno_screen.dart';
@@ -13,6 +19,7 @@ import 'package:ijandula/screens/horarios_cursos.dart';
 import 'package:ijandula/screens/horarios_screen.dart';
 import 'package:ijandula/screens/listado_profesores.dart';
 import 'package:ijandula/screens/mail_telefono_screen.dart';
+import 'package:ijandula/screens/mayores_screen.dart';
 import 'package:ijandula/screens/personal_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:ijandula/provider/email_provider.dart';
@@ -39,7 +46,16 @@ class AppState extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => DaceProvider(),
           lazy: false,
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ProviderMayoresResponse(),
+          lazy: false,
+          ),
+          ChangeNotifierProvider(
+          create: (_) => ProviderExpulsadosResponse(),
+          lazy: false,
+          ),
+
       ],
       child: MyApp(),
     );
@@ -62,6 +78,9 @@ class MyApp extends StatelessWidget {
         'datos_alumnos': (_) => DatosAlumnoScreen(),
         'horario': (_) => HorarioScreen(),
         'cursos_horario': (_) => HorariosCursosScreen(),
+        'convivencia' : ( _ ) => Convivencia(),
+        'mayores' : ( _ ) => MayoresScreen(),
+        'expulsados' : ( _ ) => ExpulsadosScreen(),
         "personal_screen": (_) => PersonalScreen(),
         "listado_screen": (_) => ListadoProfesores(),
         "horario_screen": (_) => HorarioPersonalScreen(),
