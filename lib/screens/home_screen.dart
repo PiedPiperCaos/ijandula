@@ -194,9 +194,13 @@ class Content extends StatelessWidget {
                   ),
                   children: [
                     TableRow(children: [
-                      _SingleCard(
-                          icon: "assets/profesor.png",
-                          text: "Personal del centro"),
+                      GestureDetector(
+                        child: _SingleCard(
+                            icon: "assets/profesor.png",
+                            text: "Personal del centro"),
+                        onTap: () =>
+                            Navigator.pushNamed(context, "personal_screen"),
+                      ),
                       GestureDetector(
                           child: _SingleCard(
                               icon: "assets/sombrero.png",
