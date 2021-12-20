@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ijandula/provider/alumnado_provider.dart';
+import 'package:ijandula/provider/centro_provider.dart';
 import 'package:ijandula/provider/dace_provider.dart';
 import 'package:ijandula/provider/expulsados_provider.dart';
 import 'package:ijandula/provider/mayores_provider.dart';
@@ -11,8 +12,6 @@ import 'package:ijandula/screens/dace_screen.dart';
 import 'package:ijandula/screens/datos_alumno_screen.dart';
 import 'package:ijandula/screens/expulsados_screen.dart';
 import 'package:ijandula/screens/contacto_screen.dart';
-import 'package:ijandula/screens/dace_screen.dart';
-import 'package:ijandula/screens/datos_alumno_screen.dart';
 import 'package:ijandula/screens/horario_personal_screen.dart';
 import 'package:ijandula/screens/horario_prof_screen.dart';
 import 'package:ijandula/screens/horarios_cursos.dart';
@@ -39,6 +38,8 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
             create: (context) => AlumnadoProvider(), lazy: false),
+        ChangeNotifierProvider(
+            create: (context) => CentroProvider(), lazy: false),
         ChangeNotifierProvider(
           create: (context) => EmailProvider(),
           lazy: false,

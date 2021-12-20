@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ijandula/models/horario_response.dart';
 import 'package:ijandula/provider/alumnado_provider.dart';
 
-class HorariosCursosScreen extends StatelessWidget {
+class HorariosCursosScreen extends StatefulWidget {
+  @override
+  State<HorariosCursosScreen> createState() => _HorariosCursosScreenState();
+}
+
+class _HorariosCursosScreenState extends State<HorariosCursosScreen> {
   List<HorarioResult> listaAlumnos = [];
 
   @override
