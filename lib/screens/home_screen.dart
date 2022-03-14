@@ -220,7 +220,12 @@ class Content extends StatelessWidget {
                               icon: "assets/campana.png", text: "DACE"),
                           onTap: () =>
                               Navigator.pushNamed(context, "dace_screen")),
-                      _SingleCard(icon: "assets/calendario.png", text: "Baño"),
+                      GestureDetector(
+                        
+                        child: _SingleCard(
+                          icon: "assets/calendario.png", text: "Baño"),
+                          onTap: () => Navigator.pushNamed(context, "bano"),
+                          ),
                       _SingleCard(icon: "", text: "")
                     ]),
                   ],

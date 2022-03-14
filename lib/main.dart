@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:ijandula/provider/ProviderAlumnado.dart';
 import 'package:ijandula/provider/alumnado_provider.dart';
 import 'package:ijandula/provider/centro_provider.dart';
 import 'package:ijandula/provider/dace_provider.dart';
@@ -7,6 +8,7 @@ import 'package:ijandula/provider/expulsados_provider.dart';
 import 'package:ijandula/provider/mayores_provider.dart';
 import 'package:ijandula/screens/alumnado_screen.dart';
 import 'package:ijandula/screens/alumnos_screen.dart';
+import 'package:ijandula/screens/bano.dart';
 import 'package:ijandula/screens/convivencia_screen.dart';
 import 'package:ijandula/screens/dace_screen.dart';
 import 'package:ijandula/screens/datos_alumno_screen.dart';
@@ -58,6 +60,10 @@ class AppState extends StatelessWidget {
           create: (_) => ProviderExpulsadosResponse(),
           lazy: false,
           ),
+          ChangeNotifierProvider(
+          create: (_) => ProviderAlumnos(),
+          lazy: false)
+
 
       ],
       child: MyApp(),
@@ -89,8 +95,17 @@ class MyApp extends StatelessWidget {
         "horario_screen": (_) => HorarioPersonalScreen(),
         "horario_prof_screen": (_) => HorarioProfScreen(),
         "contacto_screen": (_) => ContactoScreen(),
+
+        "bano": (_) => Banoo(),
+        'es': (context) => EntradaSalida(),
+        'alumnos': (context) => Alumnos(),
+        'botones': (context) => Botones(),
+        'informes': (context) => Informes(),
+        'alumnos_fecha': (context) => AlumnosFecha(),
+
         "menu_horario": (_) => MenuHorarioScreen(),
         "localizacion": (_) => LocalizacionScreen()
+
       },
     );
   }
