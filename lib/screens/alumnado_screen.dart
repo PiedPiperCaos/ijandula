@@ -13,7 +13,7 @@ class AlumnadoScreen extends StatelessWidget {
                 icono: Icons.contact_phone,
                 texto: "Mail/Telefono",
                 redireccionar: 'contact'),
-            Lista(icono: Icons.map, texto: "Localizacion", redireccionar: ''),
+            Lista(icono: Icons.map, texto: "Localizacion", redireccionar: 'localizacion'),
             Lista(
                 icono: Icons.album,
                 texto: "Horario Clase",
